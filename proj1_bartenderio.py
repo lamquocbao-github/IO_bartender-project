@@ -23,11 +23,11 @@ def rand_quest(quest):
 random_quest = rand_quest(questions)
 # print(random_quest)
 # start io
-i = input("Do you want to get something to drink?")
+i = input("Do you want to get something to drink? (Y/N)")
 if i.upper() == "Y" or i.upper() == "YES":
     for l in range(0, len(questions)):
         q_topic = random_quest[l]
-        q = input(questions[q_topic] + " (y/n)")
+        q = input(questions[q_topic] + " (Y/N)")
         if q.upper() == "Y" or q.upper() == "YES":
             a_rand = random.sample(ingredients[q_topic],1)[0]
             print("Enjoy your drink: " + a_rand + "!")
